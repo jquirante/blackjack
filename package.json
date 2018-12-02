@@ -1,0 +1,26 @@
+{
+  "name": "blackjack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "components/main.js",
+  "scripts": {
+    "build": "babel components -d dist",
+    "build": "babel --presets es2015 components -d dist",
+    "babel-version": "babel --version"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jquirante/blackjack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jquirante/blackjack/issues"
+  },
+  "homepage": "https://github.com/jquirante/blackjack#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.1.6",
+    "babel-cli": "^6.0.0"
+  }
+}
