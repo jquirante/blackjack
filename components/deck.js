@@ -5,14 +5,22 @@ class Deck {
         this.cardList = [];
     }
 
-    createDeck(card) {
-        for (var cardNumber = 0; cardNumber < 52; cardNumber ++) {
-            var card = new Card;
-            this.cardList.push(card);
+    shuffleDeck() {
+        
+        var numberOfCardsToShuffle = this.cardList.length-1;
+
+        while (numberOfCardsToShuffle > 0) {
+            var randomCard = Math.floor(Math.random() * numberOfCardsToShuffle);
+            var storedCardValue = this.cardList[randomCard];
+            this.cardList[randomCard] = this.cardList[numberOfCardsToShuffle];
+            this.cardList[numberOfCardsToShuffle] = storedCardValue;
+            numberOfCardsToShuffle--;
         }
-        return this.cardList;
+        
+        console.log(this.cardList);
+    }
+
+    dealCard() {
+        
     }
 }
-
-var testDeck = new Deck();
-console.log('testDeck', testDeck.createDeck());
