@@ -3,6 +3,7 @@ console.log('deck loaded');
 class Deck {
     constructor () {
         this.cardList = [];
+        this.dealerCards = [];
     }
 
     shuffleDeck() {
@@ -20,7 +21,18 @@ class Deck {
         console.log(this.cardList);
     }
 
-    dealCard() {
+    dealCards(player) {
+        console.log('dealCards');
+        player.playerCards.push(this.cardList.pop());
+        this.dealerCards.push(this.cardList.pop());
+        player.playerCards.push(this.cardList.pop());
+        this.dealerCards.push(this.cardList.pop());
+
+    }
+
+    compareCards() {
         
     }
+
+
 }

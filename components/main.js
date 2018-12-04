@@ -12,6 +12,9 @@ function startApp () {
     card.createCards(deck);
     console.log(deck.cardList);
     deck.shuffleDeck();
+    deck.dealCards(player1);
+    console.log('dealerCards', deck.dealerCards );
+    console.log('playerCards', player1.playerCards );
 
 }
 
