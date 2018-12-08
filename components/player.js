@@ -10,7 +10,7 @@ class Player {
         var total = null;
 
         for ( var cardValue = 0; cardValue < cardsArray.length; cardValue ++ ) {
-            switch (val) {
+            switch (cardsArray[cardValue].cardClass) {
                 case 'A':
                     total += 11;
                     break;
@@ -48,6 +48,7 @@ class Player {
         }
         
         this.total = total;
+        return this.total;
     }
 
     

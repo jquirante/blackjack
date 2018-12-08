@@ -15,6 +15,8 @@ function startApp () {
     deck.dealCards(player1);
     console.log('dealerCards', deck.dealerCards );
     console.log('playerCards', player1.playerCards );
+    debugger;
+    console.log('getCardTotal', player1.getCardTotal(player1.playerCards));
 
 }
 
